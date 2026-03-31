@@ -2,7 +2,11 @@
 <html lang="en">
 <head><meta charset="utf-8">
 	<title>Izitech Pty Ltd</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+	<meta name="description" content="iZitech Solutions - ICT Services, ERP Solutions, Web Development, Cloud Services" />
+	<meta name="theme-color" content="#006b95" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet" />
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 	<link href="css/animate.css" rel="stylesheet" />
@@ -22,7 +26,7 @@
 <button aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#ftco-nav" data-toggle="collapse" type="button">Menu</button>
 
 <form action="#" class="searchform order-lg-last">
-<div class="form-group d-flex"><input class="form-control pl-3" placeholder="Search" type="text" /><button class="form-control search" placeholder="" type="submit"></button></div>
+<div class="form-group d-flex align-items-center"><input class="form-control pl-3 search-input" placeholder="Search..." type="search" /><button class="form-control search" type="submit"><span class="fa fa-search"></span></button></div>
 </form>
 
 <div class="collapse navbar-collapse" id="ftco-nav">
@@ -30,12 +34,12 @@
 	<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
 	<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
 	<li role="presentation" class="nav-item dropdown ">
-        <a data-bs-toggle="dropdown" href="#" role="menuitem" class="nav-link dropdown-toggle" aria-expanded="true">
+        <a data-toggle="dropdown" href="#" role="menuitem" class="nav-link dropdown-toggle" aria-expanded="true">
             <span>Services</span>
         </a>
         <ul role="menu" class="dropdown-menu" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 42px);" data-popper-placement="bottom-start">
     <li role="presentation" class="nav-item">
-        <a role="menuitem" href="https
+        <a role="menuitem" href="services.html" class="dropdown-item nav-link">
             <span>ERP Solutions</span>
         </a>
     </li>
@@ -141,7 +145,7 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-start">
           <div class="col-md-6 ftco-animate">
-            <<div class="text w-100" style="background-color: rgba(0, 0, 50, 0.7); padding: 30px; border-radius: 8px; margin-right: 50px; color: white;">
+            <div class="text w-100" style="background-color: rgba(0, 0, 50, 0.7); padding: 30px; border-radius: 8px; margin-right: 50px; color: white;">
               <h2>Stay Connected</h2>
               <p>Experience seamless, high-speed, and luxury-grade connectivity with Izitech's Huawei eKit AP —
               designed for modern homes and businesses.</p>
@@ -179,7 +183,7 @@
 <div class="row">
 <div class="col-md-4 services ftco-animate">
 <div class="d-block d-flex">
-<div class="icon d-flex justify-content-center align-items-center"></div>
+<div class="icon d-flex justify-content-center align-items-center"><i class="fa fa-lightbulb-o"></i></div>
 
 <div class="media-body pl-3">
 <h3 class="heading">Consulting services</h3>
@@ -189,7 +193,7 @@
 </div>
 
 <div class="d-block d-flex">
-<div class="icon d-flex justify-content-center align-items-center"></div>
+<div class="icon d-flex justify-content-center align-items-center"><i class="fa fa-cogs"></i></div>
 
 <div class="media-body pl-3">
 <h3 class="heading">Managed Services:</h3>
@@ -201,7 +205,7 @@
 
 <div class="col-md-4 services ftco-animate">
 <div class="d-block d-flex">
-<div class="icon d-flex justify-content-center align-items-center"></div>
+<div class="icon d-flex justify-content-center align-items-center"><i class="fa fa-shield"></i></div>
 
 <div class="media-body pl-3">
 <h3 class="heading">Security:</h3>
@@ -211,7 +215,7 @@
 </div>
 
 <div class="d-block d-flex">
-<div class="icon d-flex justify-content-center align-items-center"></div>
+<div class="icon d-flex justify-content-center align-items-center"><i class="fa fa-sitemap"></i></div>
 
 <div class="media-body pl-3">
 <h3 class="heading">Networking:</h3>
@@ -223,7 +227,7 @@
 
 <div class="col-md-4 services ftco-animate">
 <div class="d-block d-flex">
-<div class="icon d-flex justify-content-center align-items-center"></div>
+<div class="icon d-flex justify-content-center align-items-center"><i class="fa fa-cloud"></i></div>
 
 <div class="media-body pl-3">
 <h3 class="heading">Virtualization and Cloud services:</h3>
@@ -233,7 +237,7 @@
 </div>
 
 <div class="d-block d-flex">
-<div class="icon d-flex justify-content-center align-items-center"></div>
+<div class="icon d-flex justify-content-center align-items-center"><i class="fa fa-code"></i></div>
 
 <div class="media-body pl-3">
 <h3 class="heading">Web &amp; mobile Development</h3>
@@ -267,6 +271,42 @@
     width: 40px;
     height: 40px;
   }
+
+  /* Mobile responsiveness */
+  @media (max-width: 767.98px) {
+    #carouselExampleIndicators {
+      margin: 20px auto;
+      padding: 0 10px;
+    }
+
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+      width: 35px;
+      height: 35px;
+    }
+
+    .carousel-indicators {
+      bottom: 15px;
+    }
+
+    .carousel-indicators li {
+      width: 8px;
+      height: 8px;
+      margin: 0 4px;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    .carousel-indicators {
+      bottom: 10px;
+    }
+  }
 </style>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -279,19 +319,19 @@
 
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <video width="640" height="360" controls>
+      <video style="width: 100%; height: auto; max-width: 640px; margin: 0 auto; display: block;" controls autoplay muted>
         <source src="videos/izi website.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
     <div class="carousel-item">
-      <video width="640" height="360" controls>
+      <video style="width: 100%; height: auto; max-width: 640px; margin: 0 auto; display: block;" controls autoplay muted>
         <source src="videos/IDHB1.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
     <div class="carousel-item">
-      <video width="640" height="360" controls>
+      <video style="width: 100%; height: auto; max-width: 640px; margin: 0 auto; display: block;" controls autoplay muted>
         <source src="videos/IDHB2.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -309,10 +349,16 @@
 </div>
 
 <script>
-  // Pause all videos when slide changes
+  // Pause all videos when slide starts
   $('#carouselExampleIndicators').on('slide.bs.carousel', function () {
     $('.carousel-item video').each(function() {
-      this.pause(0);
+      this.pause();
+    });
+  });
+  // Play the active video when slide completes
+  $('#carouselExampleIndicators').on('slid.bs.carousel', function () {
+    $('.carousel-item.active video').each(function() {
+      this.play();
     });
   });
 </script>
@@ -322,20 +368,8 @@
     <div class="row d-flex no-gutters">
       <div class="col-md-6 d-flex">
         <div class="img img-video d-flex align-self-stretch align-items-center justify-content-center mb-4 mb-sm-0"
-          style="background-image: url(images/about.jpg);">
-        </div>
+          style="background-image: url(images/about.jpg);"></div>
       </div>
-    </div>
-  </div>
-</section>
-
-  <section class="ftco-section ftco-no-pt ftco-no-pb bg-light">
-    <div class="container">
-      <div class="row d-flex no-gutters">
-        <div class="col-md-6 d-flex">
-          <div class="img img-video d-flex align-self-stretch align-items-center justify-content-center mb-4 mb-sm-0"
-            style="background-image: url(images/about.jpg);"></div>
-        </div>
 
 <div class="col-md-6 pl-md-5">
 <div class="row justify-content-start py-5">
@@ -487,7 +521,7 @@ Free setup</p>
 unlimited bandwidth<br />
 Free setup</p>
 </div>
-<a <!--Do not edit below this line – It is payment button -->
+<a --Do not edit below this line – It is payment button -->
 <form action="https://paynow.netcash.co.za/Site/PayNowDonate.aspx" method="post" name="payNowDonationForm">
 <input id="m1" name="m1" type="hidden" value="1928a03f-3911-407d-a72b-177135ef031e" />
 <input id="m2" name="m2" type="hidden" value="ffbb6637-bd72-4af4-b43b-2ab37e39efcf" />
@@ -514,7 +548,7 @@ unlimited email accounts<br />
 unlimited bandwidth<br />
 Free setup</p>
 </div>
-<a <!--Do not edit below this line – It is payment button -->
+<a --Do not edit below this line – It is payment button -->
 <form action="https://paynow.netcash.co.za/Site/PayNowDonate.aspx" method="post" name="payNowDonationForm">
 <input id="m1" name="m1" type="hidden" value="1928a03f-3911-407d-a72b-177135ef031e" />
 <input id="m2" name="m2" type="hidden" value="ffbb6637-bd72-4af4-b43b-2ab37e39efcf" />
@@ -605,6 +639,25 @@ Free setup</p>
 </footer>
 <!-- loader -->
 
-<div class="show fullscreen" id="ftco-loader"><svg class="circular" height="48px" width="48px"> <circle class="path-bg" cx="24" cy="24" fill="none" r="22" stroke="#eeeeee" stroke-width="4"></circle> <circle class="path" cx="24" cy="24" fill="none" r="22" stroke="#F96D00" stroke-miterlimit="10" stroke-width="4"></circle> </svg></div>
-<script src="js/jquery.min.js"></script><script src="js/jquery-migrate-3.0.1.min.js"></script><script src="js/popper.min.js"></script><script src="js/bootstrap.min.js"></script><script src="js/jquery.easing.1.3.js"></script><script src="js/jquery.waypoints.min.js"></script><script src="js/jquery.stellar.min.js"></script><script src="js/jquery.animateNumber.min.js"></script><script src="js/bootstrap-datepicker.js"></script><script src="js/jquery.timepicker.min.js"></script><script src="js/owl.carousel.min.js"></script><script src="js/jquery.magnific-popup.min.js"></script><script src="js/scrollax.min.js"></script><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script><script src="js/google-map.js"></script><script src="js/main.js"></script></body>
+<div class="show fullscreen" id="ftco-loader"><svg class="circular" height="32px" width="32px"> <circle class="path-bg" cx="16" cy="16" fill="none" r="14" stroke="#eeeeee" stroke-width="3"></circle> <circle class="path" cx="16" cy="16" fill="none" r="14" stroke="#F96D00" stroke-miterlimit="10" stroke-width="3"></circle> </svg></div>
+
+<!-- AI Chatbot Widget -->
+<div id="chatbot-widget">
+  <div id="chatbot-button"><i class="fa fa-robot" aria-hidden="true"></i><span class="chatbot-label">AI</span></div>
+  <div id="chatbot-window">
+    <div id="chatbot-header">
+      <span>AI Assistant</span>
+      <button id="chatbot-close">&times;</button>
+    </div>
+    <div id="chatbot-messages">
+      <div class="message bot">Hello! I'm your AI assistant. How can I help you today?</div>
+    </div>
+    <div id="chatbot-input-area">
+      <input type="text" id="chatbot-input" placeholder="Type your message...">
+      <button id="chatbot-send">Send</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/jquery.min.js"></script><script src="js/jquery-migrate-3.0.1.min.js"></script><script src="js/popper.min.js"></script><script src="js/bootstrap.min.js"></script><script src="js/jquery.easing.1.3.js"></script><script src="js/jquery.waypoints.min.js"></script><script src="js/jquery.stellar.min.js"></script><script src="js/jquery.animateNumber.min.js"></script><script src="js/bootstrap-datepicker.js"></script><script src="js/jquery.timepicker.min.js"></script><script src="js/owl.carousel.min.js"></script><script src="js/jquery.magnific-popup.min.js"></script><script src="js/scrollax.min.js"></script><script src="js/google-map.js"></script><script src="js/main.js"></script></body>
 </html>
