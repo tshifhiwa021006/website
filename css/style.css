@@ -13555,6 +13555,21 @@ textarea.form-control {
     background-color: #005a7d;
 }
 
+.chatbot-contact-link {
+    display: inline-block;
+    padding: 10px 14px;
+    background-color: #006b95;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.chatbot-contact-link:hover {
+    background-color: #005a7d;
+}
+
 /* Mobile Responsive Chatbot */
 @media (max-width: 575.98px) {
     #chatbot-button {

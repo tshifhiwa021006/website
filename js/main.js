@@ -243,7 +243,19 @@
                                 setTimeout(function() {
                                         var response = getAIResponse(message);
                                         console.log('AI response:', response);
-                                        addMessage(response, 'bot');
+                                        if (typeof response === 'object') {
+                                                addMessage(response.text, 'bot');
+                                                if (response.redirectContact) {
+                                                        addContactSuggestion();
+                                                        if (window.location.pathname.split('/').pop().toLowerCase() !== 'contact.html') {
+                                                                setTimeout(function() {
+                                                                        window.location = 'contact.html#contact';
+                                                                }, 2500);
+                                                        }
+                                                }
+                                        } else {
+                                                addMessage(response, 'bot');
+                                        }
                                 }, 1000);
                         }
                 }
@@ -254,6 +266,17 @@
                         var messageDiv = $('<div class="message ' + sender + '">' + messageHtml + '</div>');
                         $('#chatbot-messages').append(messageDiv);
                         $('#chatbot-messages').scrollTop($('#chatbot-messages')[0].scrollHeight);
+                }
+
+                function addContactSuggestion() {
+                        var contactHtml = '<div class="message bot">I\'m sorry, I can\'t answer that right now.<br><br>Please use the button below to go to our contact page and fill in your details so our team can help you directly.</div>';
+                        var contactButton = '<div class="message bot"><a class="chatbot-contact-link" href="contact.html#contact">Open Contact Form</a></div>';
+                        $('#chatbot-messages').append(contactHtml).append(contactButton);
+                        $('#chatbot-messages').scrollTop($('#chatbot-messages')[0].scrollHeight);
+                }
+
+                function makeAIResponse(text, redirectContact) {
+                        return { text: text, redirectContact: redirectContact === true };
                 }
 
                 function getAIResponse(message) {
@@ -329,8 +352,8 @@
                                 return 'We provide comprehensive support:\n\n📞 Technical Support - Quick resolution of IT issues\n📧 Email Support - Detailed problem analysis\n🎯 Proactive Monitoring - Prevention of potential issues\n📋 Documentation - Guides and resources\n\nOur team is ready to help! Contact us or use our Contact page.';
                         }
                         
-                        // Default helpful response
-                        return 'Thank you for your question! We\'d love to help more. You can:\n\n• Ask about our services\n• Learn about pricing and plans\n• Get contact information\n• Explore our company background\n• Review our completed projects\n\nOr contact our team directly through the Contact page for specialized assistance!';
+                        // Default fallback response directs the user to contact support
+                        return makeAIResponse('I\'m sorry, I can\'t answer that question right now. Please contact us directly so we can help you faster. I will redirect you to the Contact page to fill in your information.', true);
                 }
         };
         chatbot();
