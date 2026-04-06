@@ -329,7 +329,7 @@
                         
                         // Pricing questions
                         if (lowerMessage.match(/(price|pricing|cost|how much|rate|plan)/) || lowerMessage.includes('pricing')) {
-                                return 'We offer flexible pricing for different needs:\n\n• Starter - R1,000/month (500MB space, 5 email accounts)\n• Bronze - R1,500/month (1GB space, 10 email accounts)\n• Silver - R2,400/month (5GB space, 20 email accounts)\n• Gold - R3,200/month (10GB space, unlimited emails)\n\nEach plan includes domain registration, unlimited bandwidth, and free setup. Custom enterprise solutions also available!\n\nLearn more: <a href="services.html" target="_blank">Services & Plans</a> (includes pricing details).';
+                                return 'We offer flexible pricing for different needs:\n\n• Starter - R1,000/month (500MB space, 5 email accounts)\n• Bronze - R1,500/month (1GB space, 10 email accounts)\n• Silver - R2,400/month (5GB space, 20 email accounts)\n• Gold - R3,200/month (10GB space, unlimited emails)\n\nEach plan includes domain registration, unlimited bandwidth, and free setup. Custom enterprise solutions also available!\n\nLearn more: <a href="services.html" target="_blank">Services & Plans</a> or visit our shop at <a href="https://odoo.izitech.co.za/shop" target="_blank">https://odoo.izitech.co.za/shop</a>.';
                         }
                         
                         // Project/Portfolio questions
